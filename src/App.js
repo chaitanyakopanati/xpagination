@@ -78,7 +78,6 @@ const App = () => {
           Previous
         </button>
 
-        {/* Current page number styled as a button */}
         <span
           style={{
             backgroundColor: 'green',
@@ -89,7 +88,7 @@ const App = () => {
             border: 'none',
           }}
         >
-         {currentPage}
+          {currentPage}
         </span>
 
         <button
