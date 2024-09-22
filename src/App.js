@@ -25,6 +25,18 @@ const App = () => {
   const currentEmployees = employeeData.slice(indexOfFirstItem, indexOfLastItem);
   const totalPages = Math.ceil(employeeData.length / itemsPerPage);
 
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  const handlePreviousPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
   return (
     <div style={{ textAlign: 'center', marginTop: '20px' }}>
       <h1>Employee Data Table</h1>
@@ -51,7 +63,7 @@ const App = () => {
 
       <div style={{ marginTop: '20px' }}>
         <button
-          onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+          onClick={handlePreviousPage}
           disabled={currentPage === 1}
           style={{
             backgroundColor: 'green',
@@ -81,7 +93,7 @@ const App = () => {
         </span>
 
         <button
-          onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+          onClick={handleNextPage}
           disabled={currentPage === totalPages}
           style={{
             backgroundColor: 'green',
