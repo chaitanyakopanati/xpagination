@@ -89,7 +89,7 @@ const App = () => {
             border: 'none',
           }}
         >
-          Page {currentPage} of {totalPages}
+         {currentPage}
         </span>
 
         <button
