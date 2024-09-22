@@ -64,7 +64,7 @@ const App = () => {
       <div style={{ marginTop: '20px' }}>
         <button
           onClick={handlePreviousPage}
-          disabled={currentPage === 1}
+          // disabled={currentPage === 1}
           style={{
             backgroundColor: 'green',
             color: 'white',
@@ -75,7 +75,7 @@ const App = () => {
             opacity: currentPage === 1 ? 0.5 : 1,
           }}
         >
-          Previous
+          Previous 
         </button>
 
         <span
@@ -93,7 +93,7 @@ const App = () => {
 
         <button
           onClick={handleNextPage}
-          disabled={currentPage === totalPages}
+          // disabled={currentPage === totalPages}
           style={{
             backgroundColor: 'green',
             color: 'white',
